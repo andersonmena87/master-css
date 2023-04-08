@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso html</title>
+</head>
+
+<body>
+    <!-- Etiquetas mas importantes para textos -->
+    <!--H1 Siempre debe haber uno -->
+    <h1>Título de mi web</h1>
+    <h2>Bienvenido a mi web</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <br />
+        Dolorem cumque ea praesentium saepe dolor harum alias esse, nihil a blanditiis, nostrum quos minima mollitia,
+        voluptatibus velit reprehenderit impedit numquam labore?
+    </p>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Magnam quas dolorem at dolor iste pariatur enim rerum
+        cupiditate qui ratione, possimus illo laborum magni quos! Aliquid commodi accusantium impedit sapiente?
+    </p>
+    <hr />
+    <h2>Imagenes en HTML</h2>
+
+    <!-- Atributo alt -> Texto que se muestra cuando no carga la Imagen -->
+    <!-- Atributo title -> Muestra un tooltip con el  texto al pasar sobre la etiqueta -->
+    <!-- Se recomienda usar solo width o height para no distorcionar la imagen -->
+    <img src="imagenes/animales/leopard-515509_1280.jpg" alt="Imagen de leopardo" title="Foto de leopardo" width="200px" />
+
+    <hr />
+    <h3>Tercer encabezado de la página</h3>
+    <p>
+        <!-- Etiqueta em: Cursiva -->
+        <em>Lorem ipsum dolor sit amet consectetur</em> 
+        <strong>adipisicing elit.</strong> Eius fuga ratione officia eum hic eveniet possimus
+        autem, voluptatem itaque illum laudantium vero, 
+        <!-- Etiqueta i: Cursiva -->
+        <i>iusto assumenda labore aliquam laborum numquam velit voluptatum!</i>
+        <!-- Remarcar una cita dentro del texto -->
+        <blockquote>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit laudantium, tempora autem voluptatem, quas minima nulla in nobis perspiciatis, tempore ad neque ratione voluptate facere iure? Dolor neque unde quam.
+        </blockquote>
+    </p>
+
+    <!-- Litas -->
+        <!-- Ordena -->
+        <h4>Listado de frutas ordenada</h4>
+        <ol>
+            <li>Manzana</li>
+            <li>Pera</li>
+            <li>Naranja</li>
+            <li>Uvas</li>
+        </ol>
+
+
+        <!-- Desordanada -->
+        <h4>Listado de frutas desordenada</h4>
+        <ul>
+            <li>Manzana
+                <ul>
+                    <li>Verde</li>
+                    <li>Roja</li>
+                </ul>
+            </li>
+            <li>Pera verda</li>
+            <li>Naranja</li>
+            <li>Uvas verdes</li>
+        </ul>
+
+        <hr />
+        <h3>Tablas</h3>
+        Atributos:
+        table -> border: Agrega bordes a la columna
+        td, th -> colspan: expande la colmuna
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Edad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Clark</td>
+                    <td>kent</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Bruce</td>
+                    <td>Wayne</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Total edad: </td>
+                    <td colspan="2">90</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr />
+        <h3>Formulario</h3>
+        <form action="">
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" placeholder="Escribe tu nombre"/>
+            </div>
+            
+            <div>
+                <label for="descripcion">Descripción</label>
+                <textarea type="text" name="descripcion" placeholder="Descripción"></textarea>
+            </div>
+
+            <div>
+                <input type="radio" name="genero" value="Hombre" /> Hombre
+                <input type="radio" name="genero" value="Mujer" /> Mujer
+            </div>
+
+            <div>
+                <select name="hobbies">
+                    <option value="">Seleccionar hobbie</option>
+                    <option value="futbol">Futbol</option>
+                    <option value="baloncesto">Baloncesto</option>
+                </select>
+            </div>
+
+            <div>
+                <input type="submit" value="Enviar formulario">
+            </div>
+        </form>
+</body>
+
+</html>

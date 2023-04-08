@@ -1,0 +1,109 @@
+/* SELECTORES */
+
+
+/* Selector universal */
+/* * selecciona todos los elementos del html */
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    /* atributos recomendados para web */
+    /* margin: 0px;
+    padding: 0px; */
+}
+
+/* Selector de etiqueta */
+h1{
+    background: blue;
+    color: white;
+    padding: 10px;
+}
+
+a{
+    font-size: 18px;
+    color: rgb(81, 82, 156);
+    text-decoration: none;
+}
+
+footer a {
+    color: red;
+}
+
+/* selector de id */
+#descripcion {
+    border: 5px solid black;
+    padding: 15px;
+}
+
+/* Importante el navegador lee el css de arriba abajo y la regla que predomina es la última  */
+#titulo{
+    border: 1px dashed white;
+}
+
+/* Selector de clase */
+.parrafo {
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.parrafo1, .parrafo3 {
+    background-color: azure;
+    padding: 10px;
+}
+
+.parrafo3 {
+    background-color: cadetblue;
+}
+
+/* Selector de atributo */
+
+#usuario form {
+    border: 5px solid blue;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+/* Regla general para todos los elementos del formulario */
+#usuario form * {
+    display: block;
+}
+
+input[type="text"] {
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 300px;
+}
+
+input[type="submit"] {
+    background-color: green;
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+
+    /* Propiedad para transformar el texto */
+    text-transform: uppercase;
+
+    border: 1px solid greenyellow;
+    cursor: pointer;
+}
+
+/* Selector hijo */
+
+#menu > li > a {
+    font-size: 18px;
+    color: green;
+}
+
+/* Prioridad */
+/* La última regla de css es la que predomina */
+
+/* Si se especifica mas en la regla esta tendra mas prioridad */
+#saludo h1 {
+    background-color: royalblue;
+}
+
+h1 {
+    background-color: brown;
+}
+
