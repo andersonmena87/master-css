@@ -16,6 +16,23 @@ h1 {
     font-style: italic;
     text-transform: uppercase;
     font-size: 45px;
+
+    /* Colores */
+    
+    /* Colores del sistema */
+    /* https://www.w3schools.com/cssref/css_colors.php */
+    color: DarkCyan;
+    
+    /* Colores hexadecimales */
+    color: #ccc;
+    
+    /* Colores RGB */
+    color: rgb(153, 255, 153);
+
+    /* Colores RGBA */
+    /* La a es la transparencia */
+    background: rgba(68, 94, 43, 0.5);
+
 }
 
 h3 {

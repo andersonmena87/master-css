@@ -1,0 +1,50 @@
+body {
+    color: blanchedalmond;
+    background-color: #ccc;
+    background-image: url(img/fondo1.jpg);
+
+    /* Fondo fijo -> Funciona cuando la página tiene scroll  */
+    background-attachment: fixed;
+
+    /* La imagen se ubica en la izquierda y abajo */
+    background-position: left bottom;
+
+    /* Otras propiedades del background */
+    /* background-repeat: no-repeat; */
+    /* background-size: Recomendado para imagenes muy grandes */
+    /* background-size: 100%; */
+
+    /* Identación: ver identación en elemento del body ejemplo: <p>  */
+    text-indent: 20px;
+
+    /* Espacio entre palabra y palabra */
+    word-spacing: 10px;
+
+    /* Espacio entre letra y letra */
+    letter-spacing: 10px;
+
+}
+
+#caja {
+    border: 5px solid black;
+    padding: 10px;
+    background-color: rgb(53, 3, 3);
+    color: white;
+
+    /* propiedades de texto */
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+
+    /* Altura de linea */
+    line-height: 20px;
+
+    /* Modificar el texto */
+    text-transform: uppercase;
+    text-decoration: line-through;
+}
+
+h2 {
+    color: white;
+    background-color: aqua;
+    background-image: url(img/patron2.jpg);
+}
