@@ -1,0 +1,68 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 50px;
+}
+
+ul li {
+    font-size: 20px;
+}
+
+/* pseudoclases a elementos hijos */
+ul li:first-child {
+    color:blueviolet;
+    font-weight: bold;
+}
+
+ul li:nth-child(2) {
+    color:brown;
+    font-weight: bold;
+}
+
+ul li:last-child {
+    color:red;
+    font-weight: bold;
+}
+
+/*Fin pseudoclases a elementos hijos */
+
+#mi-enlace {
+    font-size: 30px;
+    color: red;
+}
+
+/* Pone los estilos cuando no se ha dado click en el enlace */
+#mi-enlace:link {
+    color: black;
+}
+
+/* Cuando ya se le dio click al enlace */
+#mi-enlace:visited {
+    color: blue;
+}
+
+
+#mi-enlace:hover {
+    color: yellowgreen;
+}
+
+/* Mientras se pulsa el enlace */
+#mi-enlace:active {
+    color: crimson;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+input[type="text"] {
+    display: block;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+input[type="text"]:focus {
+    border: 4px dashed red;
+}

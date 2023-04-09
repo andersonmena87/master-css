@@ -1,0 +1,78 @@
+#boton {
+    display: block;
+    width: 100px;
+    background-color: green;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: 2px solid yellowgreen;
+    padding: 20px;
+    border-radius: 10px;
+
+    /* Transición de todas las propiedas css: se puede poner en segundos o milisegundos */
+    /* transition: all 500ms; */
+
+    /* Transición a solo una propiedad */
+    transition: border 3s;
+
+    /* Transición a solo a varias propiedades */
+    transition: border-radius 1s, background-color 800ms;
+}
+
+#boton:hover {
+    border-radius: 15px;
+    background-color: blueviolet;
+    border: 15px solid purple;
+}
+
+#caja {
+    margin-top: 25px;
+    width: 250px;
+    height: 250px;
+    background-color: lightcoral;
+    color: white;
+    line-height: 200px;
+    text-align: center;
+    font-size: 20px;
+
+    /* Propiedades de animación */
+    animation-name: desplazamiento;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+
+    /* Para desplazarse a la misma velocidad */
+    animation-timing-function: linear;
+}
+
+/* 1. primera forma */
+/* @keyframes desplazamiento {
+    from {
+        margin-left: 0px;
+    }
+    to{
+        margin-left: 900px;
+    }
+} */
+
+/* 2. SEgunda forma con porcentajes */
+@keyframes desplazamiento {
+    0% {
+        margin-left: 0px;
+        /* transform: propiedad para poner a rodar el elemento */
+        transform: rotate(0deg);
+    }
+    50%{
+        margin-left: 1100px;
+        transform: rotate(360deg);
+        border-radius: 50%;
+    }
+    75%{
+        background-color: blue;
+    }
+    100% {
+        margin-left: 0px;
+        transform: rotate(0deg);
+    }
+}
