@@ -1,0 +1,55 @@
+/* Quitando margenes y padding(margen interior) a todos los elementos */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#contenedorCajas {
+    border: 2px solid black;
+}
+
+.cajas {
+    /* Afecta a los elementos que no son tipo bloque, para el ejemplo las etiquetas h2 
+        con clase cajas
+    */
+    display: block;
+
+    width: 250px;
+    height: 250px;
+    border: 10px solid rgb(43, 5, 27);
+    margin: 15px;
+    margin-bottom: 40px;
+    padding: 20px;
+
+    /* Posicionar cajas */
+    /* El float solo aplica para elementos de tipo bloque */
+    float: left;
+}
+
+#caja1 {
+    background-color: aqua;
+}
+
+#caja2 {
+    background-color: blueviolet;
+}
+
+#contenedorCajas p {
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clearFix {
+    /* Indicar que este contendor no es flotante */
+    float: none;
+
+    /* Limpia los flotados de las cajas */
+    clear: both;
+}
+
+.clearFix p {
+    text-align: inherit;
+}
+

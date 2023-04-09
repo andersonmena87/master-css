@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajas en css</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Cajas en css</h1>
+    <!-- Cajas flotadas -->
+    <section id="contenedorCajas">
+        <div class="cajas" id="caja1">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas labore suscipit eveniet id nulla sit
+                quasi
+                ad, assumenda, fugit fuga minus amet porro ea tempore accusamus ipsam nostrum sapiente cum?
+            </p>
+        </div>
+        <section class="cajas" id="caja2">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sit explicabo magni! Dolor aut earum
+                reprehenderit. Aut, fuga reprehenderit in, temporibus dolore neque aperiam dolorum iste, nam quasi
+                consequuntur enim?
+            </p>
+        </section>
+        <div class="cajas">Caja 3</div>
+        <div class="cajas">Caja 4</div>
+        <div class="cajas">Caja 5</div>
+        <h2 class="cajas">Caja 6 en etiqueta h2</h2>
+
+        <!--LIMPIAR ELEMENTOS FLOTADOS: Con este div se le quita el estilo de flotado al contendor de cajas -->
+        <div class="clearFix"></div>
+    </section>
+
+    <h2>Contenido despues de las cajas pocisonadas</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus labore voluptate, numquam assumenda
+        corporis esse dolorem quasi inventore nisi delectus itaque eligendi quod amet illo aut aperiam placeat rem enim.
+    </p>
+</body>
+
+</html>
