@@ -75,12 +75,57 @@ body {
     transition: all 300ms;
 }
 
+#logo:hover {
+    border-radius: 2px;
+    color: black;
+    background-color: #ccc;
+}
+
 #logo .gear {
     display: block;
     float: left;
     font-size: 30px;
     margin-top: 8px;
     margin-left: 26px;
+
+    /* ANIMACIÓN */
+    /* Propiedad animation-name -> Se le puede asignar cualquier nombre */
+    animation-name: rotate-gear;
+    animation-duration: 2s;
+    /* Propiedad animation-iteration-count -> Se queda ejecutando infintamente */
+    animation-iteration-count: infinite;
+
+    /* Linear siempre va ha tener la misma velocidad */
+    animation-timing-function: linear;
+}
+
+@keyframes rotate-gear {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+#logo:hover .gear {
+    animation: fromBellow 500ms linear;
+}
+
+@keyframes fromBellow {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(200%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+
 }
 
 #logo h3 {
@@ -90,6 +135,20 @@ body {
     margin-top: 5px;
     transition: all 300ms;
     margin-right: 65px;
+}
+
+#logo:hover h3 {
+    animation: fromRight 300ms linear;
+}
+
+@keyframes fromRight {
+    from {
+        transform: translateX(200%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
 }
 
 #menu {
@@ -128,6 +187,17 @@ body {
     background-image: url(../img/bakbaner.png);
     background-position: -245px -200px;
     margin: 20px auto;
+    animation: backBanner 10s linear;
+    overflow: hidden;
+}
+
+@keyframes backBanner {
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: -245px -200px;
+    }
 }
 
 #banner h1 {
@@ -140,6 +210,30 @@ body {
     font-weight: normal;
     text-shadow: 2px 2px 1px black;
     margin: 27px auto;
+    animation: showText 10s linear;
+}
+
+@keyframes showText {
+    0% {
+        transform: translateX(-600%) scale(5,5);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(600%) scale(5,5);
+        opacity: 1;
+    }
+    75% {
+        transform: translateX(-600%) scale(5,5);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%) scale(1,1);
+        text-shadow: 2px 2px 1px black;
+        color: white;
+        opacity: 1;
+    }
 }
 
 /* TARJETAS */
@@ -154,6 +248,11 @@ body {
     overflow: hidden;
     margin: 16px;
     margin-top: 40px;
+    transition: all 300ms;
+}
+
+.card:hover { 
+    background-color: black;
 }
 
 .card:last-child {
@@ -168,6 +267,22 @@ body {
     line-height: 110px;
     text-align: center;
     margin: 0px auto;
+    transition: all 300ms;
+}
+
+.card:hover .icon { 
+    font-size: 70px;
+    color: #37bcf9;
+    animation: showIcon 300ms linear;
+}
+
+@keyframes showIcon {
+    from {
+        transform: translateY(-200%);
+    }
+    to {
+        transform: translateY(0%);
+    }
 }
 
 .card .category {
@@ -178,6 +293,23 @@ body {
     font-weight: bold;
     text-align: center;
     color: #00538c;
+    transition: all 300ms;
+}
+
+.card:hover .category {
+    color: white;
+    animation: showCategory 400ms linear;
+}
+
+@keyframes showCategory {
+    from{
+        transform: translateY(-300%);
+        color: black;
+    }
+    to{
+        transform: translateY(0%);
+        color: white;
+    }
 }
 
 .card .description {
@@ -185,6 +317,24 @@ body {
     color: #0370b9;
     font-family: TrebuchetMS;
     font-size: 15px;
+    padding: 0 14px;
+    transition: all 300ms;
+}
+
+.card:hover .description{
+    color: white;
+    animation: showDescription 400ms linear;
+}
+
+@keyframes showDescription {
+    from {
+        transform: translateX(-300%);
+        color: black;
+    }
+    to {
+        transform: translateX(0%);
+        color: white;
+    }
 }
 
 /* BARRA LATERAL */
@@ -345,12 +495,12 @@ button:hover {
 
 #login a:hover {
     text-decoration: underline;
-    color:#2f78bc;
+    color: #2f78bc;
 }
 
 #social {
     height: 190px;
- }
+}
 
 #social a {
     display: block;
@@ -387,15 +537,15 @@ button:hover {
 }
 
 #articles article {
-   width: 98%;
-   height: auto; 
-   border: 1px solid #ccc;
-   margin: 40px auto;
-   padding: 10px;
-   font-family: TrebuchetMS;
-   background-color: white;
-   color: black;
-   box-shadow: 1px 1px 2px #ddd;
+    width: 98%;
+    height: auto;
+    border: 1px solid #ccc;
+    margin: 40px auto;
+    padding: 10px;
+    font-family: TrebuchetMS;
+    background-color: white;
+    color: black;
+    box-shadow: 1px 1px 2px #ddd;
 }
 
 #articles h4 {
@@ -430,7 +580,7 @@ button:hover {
     margin: 6px;
 }
 
-#articles article p { 
+#articles article p {
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 15px;
@@ -462,7 +612,7 @@ button:hover {
 }
 
 /* Div que son hijos del footer */
-#footer .wrap > div {
+#footer .wrap>div {
     float: left;
     width: 320px;
     height: 370px;
