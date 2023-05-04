@@ -1,0 +1,116 @@
+/* Variables en css */
+:root {
+    --rojo: red;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#layout {
+    /* display: inline-flex;  El width: Se adapta a los elementos que contiene; */
+    display: flex;
+    /*flex-direction: row;  Horizontal: por default es row */
+    /*flex-direction: column;  Vertical */
+
+    /* Propiedad acomoda las cajas al ancho del contenedor */
+    /*flex-wrap: wrap;  Por defecto nowrap*/
+
+    flex-flow: row wrap; /* Mezcla del flex-direction  y flex-wrap*/
+
+    border: 3px solid black;
+    padding: 5px;
+}
+
+.caja {
+    /* flex-grow: Solo se usa en los elementos hijos; */
+    flex-grow: 1; /* El 1 indica que cada elemento va ha ocupar el mismo espacio*/
+
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border: 4px solid #222;
+    margin: 10px;
+    background-color: gray;
+}
+
+.red {
+    flex-basis: calc(100% /3 ); /* Tamaño minimo*/
+    /*flex-grow: 5;  Espacio que va ha ocupar */
+    /* order: 4; */
+    background-color: var(--rojo);
+}
+
+.blue {
+    /*flex-basis: calc(100% /3 ); Tamaño minimo*/
+    /* order: -1; Se pone -1 para que se ubique de primera, solo aplica cuando los demas elementos no tienen order */
+    /* order: 1; */
+    /*flex-shrink: 0;  disminuir tamaño*/
+    background-color: blue;
+}
+
+.orange {
+    flex-basis: 100%; /* Tamaño minimo*/
+    /* flex-grow: 6; */
+    /* order: 3; */
+    background-color: orange;
+}
+
+.green {
+    /* order: 2; */
+    flex-basis: calc(100% /3 ); /* Tamaño minimo*/
+    background-color: green;
+}
+
+/* Mas propiedades de flex */
+
+#layout1 {
+    display: flex;
+    flex-flow: row wrap; /* Mezcla del flex-direction  y flex-wrap*/
+    justify-content: space-around;
+    align-items: center; /* Alineación vertical */
+    
+
+    height: 700px;
+    margin-top: 20px;
+    border: 3px solid black;
+    padding: 5px;
+}
+
+.caja-mod {
+    flex-grow: 1;
+
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border: 4px solid #222;
+    margin: 10px;
+    background-color: gray;
+}
+
+.red-mod {
+    align-self: flex-start;
+    background-color: rgb(224, 65, 65);
+}
+
+.green-mod {
+    align-self: center;
+    background-color: rgb(183, 236, 183);
+}
+
+.blue-mod {
+    align-self: center;
+    background-color: rgb(57, 57, 223);
+}
+
+.orange-mod {
+    align-self: flex-end;
+    background-color: rgb(216, 144, 10);
+}
+
