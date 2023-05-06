@@ -1,0 +1,111 @@
+body {
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* ESTILOS PRACTICA GRID */
+
+.layout {
+    /* Definir grid */
+    display: grid;
+
+    /* COLUMNAS */
+    /* grid-template-columns: calc(50% - 6px) calc(50% - 6px); /* Se ordena en 2 columnas */
+    /* grid-template-columns: 25% 25% 25% 25%; /* 4 columnas de 25% */
+    /* grid-template-columns: repeat(4, calc(25% - 6px)); */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 Columnas usando fracción */
+    grid-template-columns: repeat(2, 1fr);
+    
+    /* FILAS */
+    /* grid-template-rows: repeat(3, 1fr); /* Definiendo 3 filas con el mismo tamaño */
+    grid-template-rows: 1fr 2fr 1fr;
+    
+    grid-gap: 10px; /*Dar margenes - Espacio entre elementos grid*/
+
+    margin: 0 auto;
+    padding: 10px;
+    border: 3px solid orangered;
+}
+
+.layout .caja,
+.layout1 .caja {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: 4px solid #222;
+    background-color: gray;
+    padding: 20px;
+}
+
+.layout .red,
+.layout1 .red {
+    background: rgb(243, 56, 56);
+}
+
+.layout .blue,
+.layout1 .blue {
+    background: blue;
+}
+
+.layout .green,
+.layout1 .green {
+    background: green;
+}
+
+.layout .pink,
+.layout1 .pink {
+    background: pink;
+}
+
+.layout .orange,
+.layout1 .orange {
+    background: orange;
+}
+
+.layout .lightblue,
+.layout1 .lightblue {
+    background: lightblue;
+}
+
+/* Expanción en layout 1 */
+.layout1 {
+    /* Definir grid */
+    display: grid;
+
+    /* COLUMNAS */
+    grid-template-columns: repeat(2, 1fr);
+    
+    /* FILAS */
+    grid-template-rows: 1fr 2fr 1fr;
+    
+    grid-gap: 10px; /*Dar margenes - Espacio entre elementos grid*/
+
+    margin: 10px auto;
+    padding: 10px;
+    border: 3px solid orangered;
+}
+
+.layout1 .red {
+    /* Expandiendo columna 1 layout1 */
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.layout1 .lightblue {
+    /* Expandiendo última columna layout1 */
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+
+    /* Atajo para expandir */
+    grid-column: 1 / 3; /* (Inicio / Final)*/
+}
+
+/* Expandir fila */
+.layout1 .green {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.layout1 .pink {
+    grid-row: 2 / 4;
+}
