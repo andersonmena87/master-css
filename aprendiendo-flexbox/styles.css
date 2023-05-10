@@ -71,7 +71,7 @@ body {
 #layout1 {
     display: flex;
     flex-flow: row wrap; /* Mezcla del flex-direction  y flex-wrap*/
-    justify-content: space-around;
+    justify-content: space-around; /* Alineación horizontal */
     align-items: center; /* Alineación vertical */
     
 
