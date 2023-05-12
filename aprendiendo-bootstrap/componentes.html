@@ -16,6 +16,319 @@
                 <h1>Componentes de Bootstrap 4</h1>
             </header>
         </div>
+
+        <div class="row">
+            <h2 class="col-12 mb-2">Alert</h2>
+
+            <div class="alert alert-success alert-dismissible fade show">
+                <strong>Increible!!</strong> Te has registrado correctamente 🎉
+
+                <button class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2 class="col-12 mb-2">Miga de pan</h2>
+            <div class="col-md-8 mt-3">
+                <nav area-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="javascript:void(0)">Inicio</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="javascript:void(0)">Desarrollo web</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="javascript:void(0)">Bootstrap</a>
+                        </li>
+                    </ol>
+                </nav>
+
+                <h2>Carrusel</h2>
+                <!-- SLIDER -->
+                <div id="slider" class="carousel slide mb-3" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#slider" data-slide-to="0" class="active"></li>
+                        <li data-target="#slider" data-slide-to="1"></li>
+                        <li data-target="#slider" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="https://via.placeholder.com/900x350?text=PRIMERA"
+                                alt="Imagén de prueba">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Imagen 1</h5>
+                                <p>Práctica con el slider</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://via.placeholder.com/900x350?text=SEGUNDA"
+                                alt="Imagén de prueba">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://via.placeholder.com/900x350?text=TERCERA"
+                                alt="Imagén de prueba">
+                        </div>
+                    </div>
+
+                    <a href="#slider" class="carousel-control-prev" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+
+                    <a href="#slider" class="carousel-control-next" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                </div>
+                <!--FIN SLIDER -->
+            </div>
+            <div class="col-md-4">
+                <h2>Jumbotron</h2>
+                <div class="jumbotron">
+                    <h3>Bienvenido a mi web</h3>
+                    <p class="lead">Esto es un jumbotron en Bootstrap</p>
+                    <hr class="my-2">
+                    <p>Identificate en la web</p>
+                    <button class="btn btn-primary btn-lg">Login</button>
+                </div>
+                <hr>
+                <h2>Formulario</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input class="form-control" type="text" name="name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    Apellido
+                                </span>
+                            </div>
+                            <input class="form-control" type="text" name="surname" placeholder="Ingresa apellido">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input class="form-control" type="text" name="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genero">Genero</label>
+                        <select name="genero" class="form-control">
+                            <option value=""></option>
+                            <option value="h">Hombre</option>
+                            <option value="m">Mujer</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input class="form-control" type="password" name="password">
+                    </div>
+
+                    <button type="button" class="btn btn-success">Enviar</button>
+                </form>
+                <hr>
+                <hr>
+                <h2>Tabla Encabezado Dark</h2>
+                <table class="table my-2">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Edad</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Bruno</td>
+                        <td>Diaz</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td>Clark</td>
+                        <td>Kent</td>
+                        <td>42</td>
+                    </tr>
+                    <tr>
+                        <td>Diana</td>
+                        <td>Amazona</td>
+                        <td>120</td>
+                    </tr>
+                </table>
+                <hr>
+                <h2>Tabla Dark</h2>
+                <table class="table table-dark my-2">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                    </tr>
+                    <tr>
+                        <td>Bruno</td>
+                        <td>Diaz</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td>Clark</td>
+                        <td>Kent</td>
+                        <td>42</td>
+                    </tr>
+                    <tr>
+                        <td>Diana</td>
+                        <td>Amazona</td>
+                        <td>120</td>
+                    </tr>
+                </table>
+                <hr>
+                <h2>Tabla striped</h2>
+                <table class="table  table-striped table-bordered my-2">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Edad</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Bruno</td>
+                        <td>Diaz</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td>Clark</td>
+                        <td>Kent</td>
+                        <td>42</td>
+                    </tr>
+                    <tr>
+                        <td>Diana</td>
+                        <td>Amazona</td>
+                        <td>120</td>
+                    </tr>
+                </table>
+
+                <hr>
+                <h2>Tabla hover</h2>
+                <table class="table  table-hover table-bordered my-2">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Edad</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Bruno</td>
+                        <td>Diaz</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td>Clark</td>
+                        <td>Kent</td>
+                        <td>42</td>
+                    </tr>
+                    <tr>
+                        <td>Diana</td>
+                        <td>Amazona</td>
+                        <td>120</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2>
+                <span class="badge badge-success">NUEVO</span>
+                Componentes de Boostrap - Badges
+            </h2>
+
+            <p class="col-md-12">
+                <span class="badge badge-warning">Articulo nuevo</span>
+            </p>
+
+            <p class="col-md-12">
+                <a href="javascript:void(0)" class="badge badge-danger badge-pill">Articulo nuevo</a>
+            </p>
+        </div>
+        <hr>
+        <div class="row">
+            <h2 class="col-md-12">Tarjetas</h2>
+
+            <div class="card col-md-3 p-0 mr-3">
+                <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Imagén de prueba">
+                <div class="card-body">
+                    <h3 class="card-title">Tarjeta 1</h3>
+                    <p class="card-text">
+                        Hola, entra a este articulo y aprenderas boostrap
+                    </p>
+                    <button class="btn btn-info">Información</button>
+                </div>
+            </div>
+
+            <div class="card col-md-3 p-0 mr-3">
+                <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Imagén de prueba">
+                <div class="card-body">
+                    <h3 class="card-title">Tarjeta 1</h3>
+                    <p class="card-text">
+                        Hola, entra a este articulo y aprenderas boostrap
+                    </p>
+                    <button class="btn btn-dark">Información</button>
+                </div>
+            </div>
+
+            <div class="card col-md-3 p-0 mr-3">
+                <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="Imagén de prueba">
+                <div class="card-body">
+                    <h3 class="card-title">Tarjeta 1</h3>
+                    <p class="card-text">
+                        Hola, entra a este articulo y aprenderas boostrap
+                    </p>
+                    <button class="btn btn-danger">Información</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Paginación</h2>
+                <nav aria-label="pagination">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">
+                                &laquo;
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">
+                                1
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">
+                                2
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">
+                                3
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:void(0)">
+                                &raquo;
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </div>
 
     <script src="jquery/jquery-3.6.4.min.js"></script>
